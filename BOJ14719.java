@@ -28,7 +28,6 @@ public class BOJ14719 {
                     before = i;
                 }
             }
-            System.out.println(result);
         }
 
         System.out.println(result);
