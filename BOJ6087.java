@@ -73,11 +73,6 @@ public class BOJ6087 {
                 int nx = cx + dirs[i][1];
                 // 범위 내
                 if (ny >= 0 && ny < board.length && nx >= 0 && nx < board[0].length) {
-                    // 반대방향으로는 이동하지 않음
-                    if (dirs[dirsIdx][0] == dirs[i][0] * -1 && dirs[dirsIdx][1] == dirs[i][1] * -1) {
-                        continue;
-                    }
-
                     // 이동 가능, 방문하지 않음
                     if (board[ny][nx] != '*') {
                         int nextCount = count;
@@ -86,8 +81,8 @@ public class BOJ6087 {
                             nextCount += 1;
                         }
 
-                        if (visited[dirsIdx][ny][nx] > nextCount) {
-                            visited[dirsIdx][ny][nx] = nextCount;
+                        if (visited[i][ny][nx] > nextCount) {
+                            visited[i][ny][nx] = nextCount;
                             dq.add(new int[]{i, ny, nx, nextCount});
                         }
                     }
