@@ -40,9 +40,6 @@ while True:
                             exit()
                         elif visited[ny][nx] == 0:
                             next[ny][nx] = curIdx
-    
-    for i in range(N):
-        print(next[i])
 
     for i in range(N):
         for j in range(N):
